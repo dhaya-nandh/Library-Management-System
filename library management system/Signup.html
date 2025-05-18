@@ -1,38 +1,104 @@
+<style>
+     /* signup */
+        .sign-container{
+            width:40%;
+            height:100%;
+            backdrop-filter: blur(20px);
+            margin: 10% 30%;
+            padding: 10px;
+            
+        }
+        .sign-items td{
+            display: flex;
+            flex-direction: column;
+            font-size: 20px; 
+        }
+        .sign-items td input{
+            width:200%;
+            height:30px;
+            outline: none;
+        }
+        .sign-items td i{
+            width:10px;
+            height:10px;
+            margin-left: 200%;
+        }
+        .sign-btn{
+            width:30%;
+            height:30px;
+            margin-left: 80px;
+            font-size: 20px;
+            color:red;
+            
+        }
+</style>
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Sign up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-  <section>
-    <table>
-      <form>
-        <tr>
-          <td>First Name</td>
-          <td><input type="text" placeholder="Enter the firstname"></td>
-        </tr>
-        <tr>
-          <td>Last Name</td>
-          <td><input type="text" placeholder="Enter the lasttname"></td>
-        </tr>
-      <tr>
-          <td>E-mail</td>
-          <td><input type="e-mail" placeholder="Enter the Email"></td>
-        </tr>  
-      <tr>
-          <td>Phone No</td>
-          <td><input type="number" placeholder="Enter the Number"></td>
-      </tr>
-      <tr>
-          <td>Create Password</td>
-          <td><input type="text" placeholder="Enter the password"></td>
-        </tr>  
-        <tr>
-          <td>Confirm Password</td>
-          <td><input type="text" placeholder="Enter the confirm password"></td>
-        </tr>
-        
-      </form>
-    </table>
-    <button>sumbit</button>
-  </section>
+    <section class="sign-container">
+        <table class="sign-items">
+            <form>
+                <tr>
+                    <td>Firstname</td>
+                    <td><input type="text" placeholder="Enter the Firstname" required></td>
+                </tr>
+                <tr>
+                    <td>Lastname</td>
+                    <td><input type="text" placeholder="Enter the Lastname" required></td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td><input type="email" placeholder="Enter the E-mail" required></td>
+                </tr>
+                <tr>
+                    <td>Phone no</td>
+                    <td><input type="number" placeholder="Enter the Phone.No" required></td>
+                </tr>
+                <tr>
+                    <td>Create Password</td>
+                    <td><input type="password" placeholder="Enter the Password" id="password" required><i class="fa-solid fa-lock" onclick="show()"></i></td>
+                </tr>
+              <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" placeholder="Enter the Confirm Password" id="confirm" required><i class="fa-solid fa-lock" onclick="show()"></i></td>
+              </tr>
+            </form>
+        </table>
+         <button onclick="signup()" class="sign-btn">Sumbit</button>
+    </section>
+    <script>
+          var password =document.getElementById("password");
+          var conpass= document.getElementById("confirm");
+          function show()
+          {
+          if((password.type == "password")  && (conpass.type == "password"))
+          {
+            password.type="text"
+            conpass.type="text"
+          }
+          else {
+            password.type="password"
+            conpass.type="password"
+          }
+        }
+        function signup()
+        {
+            if((password.value) == (conpass.value))
+        {
+            window.location.href="login.html";
+            alert("Registation successfully!!!");
+        }
+        else{
+            alert("password is mismatch")
+        }
+        }
+    </script>
 </body>
+</html>
