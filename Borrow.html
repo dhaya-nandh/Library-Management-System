@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="styles.css">
+<body>
+     <header>
+        <h1>Library Management System</h1>
+    </header>
+    <nav>
+        <a onclick="addBook()">Add Book</a>
+        <a onclick="borrowBook() ">Borrow Book</a>
+        <a onclick="returnBook()">Return Book</a>
+        <a onclick="accessAdmin()">Admin Panel</a>
+    </nav>
+    <div class="container" >
+    <h2>Borrow Book</h2>
+    <div class="form-group">
+        <label for="borrowTitle">Book Title:</label>
+        <input type="text" id="borrowTitle">
+    </div>
+    <button class="btn" onclick="borrowBook()">Borrow</button>
+</div>
+
+<div class="container" id="borrowedList">
+    <h2>Borrowed Books</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody id="borrowedTable"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
