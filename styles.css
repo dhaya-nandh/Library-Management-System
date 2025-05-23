@@ -70,3 +70,51 @@
         th {
             background: #e0e0e0;
         }
+        .login-page{
+            width:30%;
+            height: 250px;
+            display:flex;
+            flex-direction: column;
+            background-color: #3f51b5;
+            border-radius: 10px;
+            margin:10rem 30rem; 
+            padding: 10px;
+        }
+        .login-page h1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color:#ff8000;
+        }
+        .login-page label{
+           padding-left: 30px;
+           padding-top: 5px;
+           color:#ccc;
+           font-size: 20px;
+        }
+        .login-page input{
+            width:80%;
+            height:30px;
+            border-radius: 5px;
+            outline:none;
+            margin-left: 30px;
+            padding-left: 10px;
+            font-size: 20px;
+        }
+        .login-btn{
+            width:100px;
+            height:30px;
+            margin-top: 10px;
+            margin-left: 140px;
+            font-size: 20px;
+            
+        }
+        .login-page p{
+         margin-top: 15px;
+         padding-left: 100px;
+         color:#fff;
+        }
+        .login-page p a{
+            color:#00ff00;
+            cursor: pointer;
+        }

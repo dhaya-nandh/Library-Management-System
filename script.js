@@ -1,3 +1,16 @@
+
+function press(){
+    var user=document.getElementById("user").value
+    var pass=document.getElementById("pass").value
+    if(user === "admin" && pass === "admin@123")
+    {
+           window.location.href="Addbook.html";
+    }
+    else{
+        alert("username and pasword is Incorrect")
+    }
+}
+
 let books = [];
 let borrowedBooks = [];
 let returnedBooks = [];
@@ -140,3 +153,4 @@ window.onload = function () {
     displayBorrowed();
     displayReturned();
 };
+
